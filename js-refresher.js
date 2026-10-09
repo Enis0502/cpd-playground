@@ -24,5 +24,17 @@ const greet = (students) => {
     });
 }
 
+const studentNames = students.map(element => element.name)
 
-console.log(greet(students));
+console.log(studentNames);
+
+
+/*newArr = []
+
+students.forEach(student => {
+    newArr.push(student.name);
+})
+
+console.log(newArr);*/
+
+//console.log(greet(students));
