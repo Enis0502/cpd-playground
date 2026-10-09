@@ -36,8 +36,9 @@ export default function HomeScreen() {
           <AnimatedIcon />
           <ThemedText type="title" style={styles.title}>
             Welcome to&nbsp;Expo
-            Enis je car
-            
+            Enis je car.
+            We will learn react. Hope so.
+
           </ThemedText>
         </ThemedView>
 
