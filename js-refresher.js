@@ -38,3 +38,7 @@ students.forEach(student => {
 console.log(newArr);*/
 
 //console.log(greet(students));
+
+const thirdYear = students.filter(element => element.year === 3).map(element => element.name);
+
+console.log(thirdYear);
