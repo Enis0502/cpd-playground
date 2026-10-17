@@ -1,3 +1,4 @@
+
 const students = [
   {
     id: 1,
@@ -42,3 +43,15 @@ console.log(newArr);*/
 const thirdYear = students.filter(element => element.year === 3).map(element => element.name);
 
 console.log(thirdYear);
+
+
+const getAverage = (array) => {
+    let sum = 0;
+    for ( i = 0; i<= array.length; i++ ){
+        sum += array[i];
+    }
+
+    return sum/array.length
+}
+
+console.log(getAverage([1,2,3,4,5]))
