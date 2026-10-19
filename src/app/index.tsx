@@ -1,5 +1,1 @@
-export { default } from "../lab2/Counter.js";
-
-
-
-
+export { default } from "../lab2/Todo.js";
