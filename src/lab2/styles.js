@@ -22,4 +22,7 @@ export const styles = StyleSheet.create({
   disabled: {
     color: "#9AA6B5",
   },
+  liked: {
+    color: "#1b6aca",
+  },
 });
