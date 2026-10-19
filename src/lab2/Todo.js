@@ -8,10 +8,44 @@ export default function Todo() {
     { id: "2", title: "Finish Lab 2", done: false },
   ]);
 
+  const tasksLeft = todos.filter((item) => !item.done).length;
+
   const [text, setText] = useState("");
+  const [filter, setFilter] = useState("all");
+
+  const visibleTodos = todos.filter((item) => {
+    if (filter === "ative") return !item.done;
+    if (filter === "done") return item.done;
+    return true;
+  });
   return (
     <View style={styles.screen}>
-      <Text>{} Tasks left</Text>
+      <Text>{tasksLeft} Tasks left</Text>
+      <View style={{ flexDirection: "row" }}>
+        <Pressable
+          onPress={() => {
+            setFilter("all");
+          }}
+        >
+          <Text style={styles.title}>All </Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => {
+            setFilter("active");
+          }}
+        >
+          <Text style={styles.title}>Active </Text>
+        </Pressable>
+
+        <Pressable
+          onPress={() => {
+            setFilter("done");
+          }}
+        >
+          <Text style={styles.title}>Done </Text>
+        </Pressable>
+      </View>
       {todos.map((todo) => (
         <View key={todo.id} style={{ flexDirection: "row" }}>
           <Pressable
