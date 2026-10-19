@@ -11,11 +11,29 @@ export default function Todo() {
   const [text, setText] = useState("");
   return (
     <View style={styles.screen}>
+      <Text>{} Tasks left</Text>
       {todos.map((todo) => (
         <View key={todo.id} style={{ flexDirection: "row" }}>
-          <Text>
-            {todo.id} {todo.title} {todo.done}
-          </Text>
+          <Pressable
+            onPress={() =>
+              setTodos(
+                todos.map((item) =>
+                  item.id === todo.id ? { ...item, done: !item.done } : item,
+                ),
+              )
+            }
+          >
+            <Text
+              style={
+                todo.done
+                  ? { textDecorationLine: "line-through" }
+                  : { textDecorationLine: "none" }
+              }
+            >
+              {todo.id} {todo.title} {todo.done}
+            </Text>
+          </Pressable>
+
           <Pressable
             onPress={() => {
               setTodos(todos.filter((item) => todo.id !== item.id));
