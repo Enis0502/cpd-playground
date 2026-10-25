@@ -1,1 +1,1 @@
-export { default } from "../lab2/Todo.js";
+export { default } from "../lab3/Timer.js";
