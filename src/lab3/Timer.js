@@ -12,7 +12,10 @@ export default function Timer() {
     const id = setInterval(() => {
       setTime((time) => time + 1);
     }, 1000);
-    return () => clearInterval(id);
+    return () => {
+      clearInterval(id);
+      console.log("cleanup");
+    };
   }, [running]);
 
   return (
