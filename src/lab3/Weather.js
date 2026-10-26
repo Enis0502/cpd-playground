@@ -52,6 +52,9 @@ export default function Weather() {
                   console.log(city);
                   console.log(city.lat);
                   console.log(city.lon);
+                    
+                  setCity(city);
+                  
                 }
               }}
             >
